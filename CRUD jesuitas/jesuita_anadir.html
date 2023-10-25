@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Añadir Jesuita</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h2>Añadir Jesuita</h2>
+        <form action="jesuita.php" method="post">
+            <label for="id">ID Jesuita:</label>
+            <input type="text" id="id" name="id" required><br>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="firma">Firma:</label>
+            <input type="text" id="firma" name="firma" required><br>
+
+            <input type="hidden" name="opcion" value="1">
+            <input type="submit" value="Añadir">
+        </form>
+    </body>
+</html>
