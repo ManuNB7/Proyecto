@@ -3,18 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Borrar lugar</title>
-        <style>
-
-        </style>
+        <link rel="stylesheet" href="../../estilos/estilos2.css">
     </head>
     <body>
         <h2>Borrar lugar</h2>
-        <form action="lugar.php" method="post">
+        <form action="../clases/lugar.php" method="post">
             <label for="ip">IP del lugar a borrar:</label>
-            <input type="text" id="ip" name="ip" required><br>
+            <input type="text" id="ip" name="ip"><br>
 
             <input type="hidden" name="opcion" value="3">
             <input type="submit" value="Borrar lugar">
+            <a href="menu_lugar.html">Volver al menú</a>
         </form>
     </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Añadir Jesuita</title>
+        <link rel="stylesheet" href="../../estilos/estilos2.css">
+    </head>
+    <body>
+        <h2>Añadir Jesuita</h2>
+        <form action="../clases/jesuita.php" method="post">
+            <label for="id">Puesto del Jesuita:</label>
+            <input type="text" id="id" name="id"><br>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+
+            <label for="firma">Firma:</label>
+            <input type="text" id="firma" name="firma"><br>
+
+            <input type="hidden" name="opcion" value="1">
+            <input type="submit" value="Añadir">
+            <a href="menu_jesuita.html">Volver al menú</a>
+        </form>
+    </body>
+</html>

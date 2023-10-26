@@ -1,0 +1,32 @@
+body {
+    font-family: "Arial Black", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: slategray;
+}
+
+h2 {
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid cadetblue;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega transición al cambio de color */
+}
+
+.menu a:hover {
+    background-color: #ccc;
+}

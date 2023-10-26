@@ -3,18 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Borrar Jesuita</title>
-        <style>
-
-        </style>
+        <link rel="stylesheet" href="../../estilos/estilos2.css">
     </head>
     <body>
         <h2>Borrar Jesuita</h2>
-        <form action="jesuita.php" method="post">
-            <label for="id">ID Jesuita a Borrar:</label>
-            <input type="text" id="id" name="id" required><br>
+        <form action="../clases/jesuita.php" method="post">
+            <label for="id">Puesto de Jesuita a Borrar:</label>
+            <input type="text" id="id" name="id"><br>
 
             <input type="hidden" name="opcion" value="3">
             <input type="submit" value="Borrar Jesuita">
+            <a href="menu_jesuita.html">Volver al menú</a>
         </form>
     </body>
 </html>

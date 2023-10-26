@@ -3,24 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Añadir lugar</title>
-        <style>
-
-        </style>
+        <link rel="stylesheet" href="../../estilos/estilos2.css">
     </head>
     <body>
         <h2>Añadir lugar</h2>
-        <form action="lugar.php" method="post">
+        <form action="../clases/lugar.php" method="post">
             <label for="ip">IP:</label>
-            <input type="text" id="ip" name="ip" required><br>
+            <input type="text" id="ip" name="ip"><br>
 
             <label for="lugar">Nombre:</label>
-            <input type="text" id="lugar" name="lugar" required><br>
+            <input type="text" id="lugar" name="lugar"><br>
 
             <label for="descripcion">Descripción:</label>
             <input type="text" id="descripcion" name="descripcion"><br>
 
             <input type="hidden" name="opcion" value="1">
             <input type="submit" value="Añadir">
+            <a href="menu_lugar.html">Volver al menú</a>
         </form>
     </body>
 </html>

@@ -3,9 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Modificar Lugar</title>
-        <style>
-
-        </style>
+        <link rel="stylesheet" href="../../estilos/estilos2.css">
     </head>
     <body>
         <h2>Modificar Lugar</h2>
@@ -15,9 +13,9 @@
             $sql_select_lugares = "SELECT ip, lugar FROM lugar";
             $resultado_select_lugares = $conexion->query($sql_select_lugares);
             ?>
-        <form action="lugar.php" method="post">
+        <form action="../clases/lugar.php" method="post">
             <label for="ip">Selecciona un lugar:</label>
-            <select id="ip" name="ip" required>
+            <select id="ip" name="ip">
                 <?php
                     // Mostrar opciones de lugares
                     while ($row = $resultado_select_lugares->fetch_assoc()) {
@@ -27,13 +25,14 @@
             </select><br>
 
             <label for="lugar">Nombre:</label>
-            <input type="text" id="lugar" name="lugar" required><br>
+            <input type="text" id="lugar" name="lugar"><br>
 
             <label for="descripcion">Descripción:</label>
-            <input type="text" id="descripcion" name="descripcion" required><br>
+            <input type="text" id="descripcion" name="descripcion"><br>
 
             <input type="hidden" name="opcion" value="2">
             <input type="submit" value="Realizar Operación">
+            <a href="menu_lugar.html">Volver al menú</a>
         </form>
         <?php
             // Cierra la conexión después de usarla
