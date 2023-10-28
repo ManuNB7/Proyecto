@@ -1,31 +1,18 @@
 <?php
-    // Clase que extiende de Main para modificar un registro existente en la base de datos
-    class CrudModificar extends Main
-    {
-        /*
-         * Modifica un registro existente de jesuita en la base de datos.
-         */
-        public function modificar($id, $nombre, $firma)
-        {
-            // Asigna los parámetros recibidos a las propiedades de la clase heredada (Main)
-            $this->id = $id;
-            $this->nombre = $nombre;
-            $this->firma = $firma;
+    // Incluye la definición de la clase Principal
+    include 'principal.php';
 
-            // Construye la consulta SQL para actualizar el registro en la tabla jesuita
-            $sql_update = "UPDATE jesuita SET nombre='$this->nombre', firma='$this->firma' WHERE idJesuita='$this->id'";
+    // Crea una instancia de la clase Principal
+    $crud = new Principal();
 
-            // Ejecuta la consulta SQL y almacena el resultado
-            $resultado_update = $this->conexion->query($sql_update);
+    // Obtiene los datos del formulario HTML mediante POST
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+    $firma = $_POST['firma'];
 
-            // Verifica si la actualización se realizó
-            if ($resultado_update) {
-                echo "Jesuita modificado.<br>";  // Muestra un mensaje de éxito
-            } else {
-                echo "Error al modificar Jesuita: " . mysqli_error($this->conexion) . "<br>";  // Muestra un mensaje de error
-            }
+    // Modifica el registro en la tabla "jesuita" utilizando el método modificar de la clase Principal
+    $resultado = $crud->modificar($id, $nombre, $firma);
 
-            return "Operación Modificar realizada con éxito";  // Retorna un mensaje indicando el éxito de la operación
-        }
-    }
+    // Imprime un mensaje de éxito y muestra los detalles del Jesuita modificado
+    echo "--Jesuita modificado --<br> ID: $id<br> Nombre: $nombre <br> Firma: $firma<br>";
 ?>

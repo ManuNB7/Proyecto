@@ -6,16 +6,10 @@
         <link rel="stylesheet" href="../../estilos/estilos2.css">
     </head>
     <body>
-        <h2>Añadir Jesuita</h2>
-        <form action="../clases/crud_anadir.php" method="post">
+        <h2>Consultar id Jesuita</h2>
+        <form action="jesuita_modificar.php" method="post"> <!--Introduce un id y llama a otra página para ver y modificar sus datos-->
             <label for="id">Puesto del Jesuita:</label>
             <input type="text" id="id" name="id"><br>
-
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre"><br>
-
-            <label for="firma">Firma:</label>
-            <input type="text" id="firma" name="firma"><br>
 
             <input type="submit" value="Añadir">
             <a href="menu_jesuita.html">Volver al menú</a>

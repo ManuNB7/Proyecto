@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir visitas</title>
+    <link rel="stylesheet" href="../../estilos/estilos2.css">
+</head>
+<body>
+<h2>Añadir visitas</h2>
+<form action="../clases/crud_anadir.php" method="post">
+    <label for="idVisita">ID de Visita:</label>
+    <input type="text" id="idVisita" name="idVisita"><br>
+
+    <label for="idJesuita">ID del Jesuita:</label>
+    <input type="text" id="idJesuita" name="idJesuita"><br>
+
+    <label for="ip">IP del lugar:</label>
+    <input type="text" id="ip" name="ip"><br>
+
+    <label for="fechaHora">Fecha y Hora (YYYY-MM-DD HH:MM:SS):</label>
+    <input type="text" id="fechaHora" name="fechaHora"><br>
+
+    <input type="submit" value="Añadir">
+    <a href="menu_visita.html">Volver al menú</a>
+</form>
+</body>
+</html>
