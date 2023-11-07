@@ -1,16 +1,12 @@
 <?php
-    // Incluye la clase Principal que contiene la lógica para operaciones CRUD en la tabla "lugar"
     include 'principal.php';
 
-    // Crea una instancia del objeto Principal
-    $crud= new Principal();
+    $lugares= new Principal();
 
-    // Obtiene los datos del formulario
-    $ip= $_POST['ip'];
-
-    // Elimina el lugar de la base de datos
-    $resultado = $crud->borrar($ip);
-
-    // Muestra un mensaje indicando que el lugar ha sido eliminado
+    $ip= $_GET['ip'];
+    $resultado = $lugares->borrar($ip);
     echo "--Lugar eliminado --<br> ID: $ip";
+
+    // Redirecciona a la página "index_lugar.html" después de 5 segundos
+    header('Refresh: 5; URL=../vistas/modificar_borrar.php');
 ?>
